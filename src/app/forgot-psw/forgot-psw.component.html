@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Forgot Password
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- Forgot Password -->
+  <ion-content>
+    <form [formGroup]="resetpswForm">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div>
+              <ion-item>
+                <ion-input formControlName="emailId" type="email" placeholder="Enter your email" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="password" [type]="passwordType" placeholder="Password" required>
+                </ion-input>
+                <ion-icon [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+              </ion-item>
+            </div>
+            <ion-button size="large" type="submit" expand="block" (click)="forgotPassword(resetpswForm)" [disabled]="isDisable || resetpswForm.invalid">Submit</ion-button>
+          </ion-col>      
+        </ion-row>
+      </ion-grid>
+    </form>
+    
+  </ion-content>

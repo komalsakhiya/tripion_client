@@ -1,0 +1,64 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content>
+  <ion-button type="ion-button" expand="block" (click)="logOut()">Log Out</ion-button>
+</ion-content> -->
+<!-- <ion-menu side="start" menuId="first">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let p of pages" [routerLink]="p.url" routerDirection="root">{{p.title}}</ion-item>
+      <ion-item (click)="logOut()">Log Out</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="first" main></ion-router-outlet> -->
+
+
+<!-- <ion-split-pane> -->
+    <ion-menu contentId="content">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+   
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+            <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
+              <ion-label>
+                {{ p.title }}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+   
+          <ion-item (click)="logOut()">
+            <ion-icon name="log-out" slot="start"></ion-icon>
+            Logout
+          </ion-item>
+   
+        </ion-list>
+   
+      </ion-content>
+   
+    </ion-menu>
+   
+    <ion-router-outlet id="content" main></ion-router-outlet>
+   
+  <!-- </ion-split-pane> -->
+
+

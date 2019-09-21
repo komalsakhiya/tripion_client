@@ -1,0 +1,7 @@
+{
+  "name": "tripion",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
