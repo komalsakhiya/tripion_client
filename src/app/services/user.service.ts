@@ -161,4 +161,19 @@ export class UserService {
   resetPassword(data) {
     return this.http.post(config.baseApiUrl + "api/update-password", data);
   }
+
+  /**
+   * Get User Profile
+   */
+  getUserProfile(){
+    return this.http.get(config.baseApiUrl + "api/get-login-user-data");
+  }
+
+  /**
+   * Edit Profile
+   * @param {Object} data 
+   */
+  editProfile(data){
+    return this.http.put(config.baseApiUrl + "api/edit-profile",data);
+  }
 }

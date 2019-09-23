@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Currency Converter</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="countries.length">
+    <ion-item>
+      <ion-label>Country</ion-label>
+      <ionic-selectable [(ngModel)]="port" [items]="countries" itemValueField="code" itemTextField="name"
+        [canSearch]="true" (onChange)="portChange($event)">
+      </ionic-selectable>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" id="amount" min="0" placeholder="Enter Amount" (input)='getValue()'></ion-input>
+    </ion-item>
+    <ion-button (click)="currencyConvert()">Go</ion-button>
+  </div>
+  <div *ngIf="currency" style="margin: 20px 100px;">
+    <ion-text>{{currency}}</ion-text>
+  </div>
+</ion-content>

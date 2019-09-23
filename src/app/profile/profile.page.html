@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons>
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>profile</ion-title>
@@ -8,6 +8,34 @@
 </ion-header>
 
 <ion-content>
-  <p>profile works!</p>
-  <a (click) = "presentModal()">Reset Password</a>
+  <div *ngIf="userDetail">
+    <ion-row>
+      <ion-col size="4">
+        <ion-text>Name</ion-text>
+      </ion-col>
+      <ion-col size="8">
+        <ion-text>{{userDetail.name}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-text>Email</ion-text>
+      </ion-col>
+      <ion-col size="8">
+        <ion-text>{{userDetail.emailId}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-text>Contact</ion-text>
+      </ion-col>
+      <ion-col size="8">
+        <ion-text>{{userDetail.contact}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-button (click)="editProfile(userDetail)">Edit Profile</ion-button>
+  </div>
+  
+  <ion-button (click)="presentModal()">Upgrade to Premium</ion-button>
+  <!-- <a style="cursor: pointer;" (click)="presentModal()">Reset Password</a> -->
 </ion-content>

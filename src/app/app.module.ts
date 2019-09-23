@@ -18,6 +18,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import { ForgotPasswordComponent } from './modal/forgot-password/forgot-password.component';
 import { ForgotPswComponent } from './forgot-psw/forgot-psw.component';
 import { ResetPasswordComponent } from './modal/reset-password/reset-password.component';
+import { UpgradeToPremiumComponent } from './modal/upgrade-to-premium/upgrade-to-premium.component';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { ResetPasswordComponent } from './modal/reset-password/reset-password.co
     LoginComponent,
     ForgotPasswordComponent,
     ForgotPswComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    UpgradeToPremiumComponent
   ],
   entryComponents: [
     ForgotPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    UpgradeToPremiumComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { ResetPasswordComponent } from './modal/reset-password/reset-password.co
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    IonicSelectableModule,
     IonicStorageModule.forRoot()
   ],
   providers: [

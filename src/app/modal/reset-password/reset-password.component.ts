@@ -3,7 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
-declare const $ : any;
+declare const $: any;
 
 @Component({
   selector: 'app-reset-password',
@@ -43,17 +43,17 @@ export class ResetPasswordComponent implements OnInit {
    * Hide and show password
    */
   hideShowOldPassword() {
-    this.show= !this.show;
+    this.show = !this.show;
     // this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
     // this.passwordIcon = this.passwordIcon === 'ios-eye-off' ? 'ios-eye' : 'ios-eye-off';
   }
   hideShowNewPassword() {
-    this.show1= !this.show1;
+    this.show1 = !this.show1;
     // this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
     // this.passwordIcon = this.passwordIcon === 'ios-eye-off' ? 'ios-eye' : 'ios-eye-off';
   }
   hideShowConformPassword() {
-    this.show2= !this.show2;
+    this.show2 = !this.show2;
     // this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
     // this.passwordIcon = this.passwordIcon === 'ios-eye-off' ? 'ios-eye' : 'ios-eye-off';
   }

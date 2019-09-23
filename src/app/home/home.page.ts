@@ -24,6 +24,10 @@ export class HomePage {
     {
       title: 'About',
       url: '/home/about'
+    },
+    {
+      title:'Currency Converter',
+      url:'/home/currency-converter'
     }
   ];
 
